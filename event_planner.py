@@ -5,10 +5,9 @@ from datetime import datetime
 # Function for the home page
 def home_page():
     st.title("Welcome to the Event Planner")
-    
     st.write("""
     Plan your events with ease! Use this app to add, manage, and view your upcoming events.
-    You can navigate to different sections using the sidebar.
+    You can navigate to different sections using the dropdown on the sidebar.
     """)
     
     # Display some example event planning images
@@ -50,11 +49,11 @@ def view_event_page():
     else:
         st.info("No events planned yet.")
 
-# Sidebar navigation
+# Sidebar navigation with a selectbox (Dropdown)
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Pages",["Home", "Add Event", "View Events"])
+page = st.sidebar.selectbox("Choose a page", ["Home", "Add Event", "View Events"])
 
-# Display the selected page
+# Display the correct page based on the user's selection
 if page == "Home":
     home_page()
 elif page == "Add Event":
