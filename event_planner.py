@@ -52,7 +52,7 @@ def view_event_page():
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Add Event", "View Events"])
+page = st.sidebar.radio(["Home", "Add Event", "View Events"])
 
 # Display the selected page
 if page == "Home":
