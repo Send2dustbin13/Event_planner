@@ -49,9 +49,9 @@ def view_event_page():
     else:
         st.info("No events planned yet.")
 
-# Sidebar navigation with a selectbox (Dropdown)
+# Sidebar navigation with a non-editable selectbox (Dropdown)
 st.sidebar.title("Navigation")
-page = st.sidebar.selectbox("Choose a page", ["Home", "Add Event", "View Events"])
+page = st.sidebar.selectbox("Choose a page", ["Home", "Add Event", "View Events"], key="navigation")
 
 # Display the correct page based on the user's selection
 if page == "Home":
